@@ -54,7 +54,7 @@ def get_option_chain_table(symbol, instrument=None, expiry=None):
     index_datetime = abc.replace(" IST", "")    
     index_datetime = index_datetime.replace(",", "")
     index_datetime = index_datetime.replace(" ", "").upper()
-    index_datetime = datetime.datetime.strptime(index_datetime,"%b%m%Y%H:%M:%S")    
+    index_datetime = datetime.datetime.strptime(index_datetime,"%b%d%Y%H:%M:%S")    
     sptable = html_soup.find("table", {"id": "octable"})
     tp = ParseTables(soup=sptable,
                      schema=OPTIONS_CHAIN_SCHEMA,
